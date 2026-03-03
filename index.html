@@ -79,14 +79,17 @@
             letter-spacing: -0.3px;
         }
         
-        /* Typeform - Original size */
+        /* Typeform - Now with container padding */
+        .typeform-wrapper {
+            margin-bottom: 50px;
+        }
+        
         .typeform-container {
-            margin: 0 auto 50px;
             background: white;
             border-radius: 16px;
             overflow: hidden;
             box-shadow: 0 4px 24px rgba(0,0,0,0.06);
-            max-width: 700px;
+            width: 100%;
         }
         
         /* Intro Section - Light background, full width */
@@ -144,12 +147,12 @@
             font-size: 36px;
             font-weight: 500;
             color: #2D2D2D;
-            margin-bottom: 32px;
+margin-bottom: 32px;
             line-height: 1.3;
         }
         
         .section h3 {
-font-family: 'Playfair Display', serif;
+            font-family: 'Playfair Display', serif;
             font-size: 26px;
             font-weight: 500;
             color: #2D2D2D;
@@ -304,12 +307,12 @@ font-family: 'Playfair Display', serif;
         .mission-list {
             margin: 28px 0;
             list-style: none;
-        }
+}
         
         .mission-list li {
             font-size: 16px;
             color: #2D2D2D;
-margin-bottom: 14px;
+            margin-bottom: 14px;
             padding-left: 28px;
             position: relative;
         }
@@ -471,10 +474,10 @@ margin-bottom: 14px;
 
     <!-- Navigation -->
     <nav>
-        <div class="container">
+<div class="container">
             <a href="#about">About</a>
             <a href="#coaching">Coaching</a>
-<a href="#testimonials">Results</a>
+            <a href="#testimonials">Results</a>
             <a href="#faq">FAQ</a>
         </div>
     </nav>
@@ -486,10 +489,14 @@ margin-bottom: 14px;
         </div>
     </section>
 
-    <!-- Typeform Embed - Original size -->
-    <div class="typeform-container">
-        <div data-tf-widget="BniUdWel" data-tf-opacity="100" data-tf-iframe-props="title=Elevate Her Application" data-tf-transitive-search-params data-tf-medium="snippet" style="width:100%;height:600px;"></div>
-        <script src="//embed.typeform.com/next/embed.js"></script>
+    <!-- Typeform Embed - Now wrapped in container for proper padding -->
+    <div class="container">
+        <div class="typeform-wrapper">
+            <div class="typeform-container">
+                <div data-tf-widget="BniUdWel" data-tf-opacity="100" data-tf-iframe-props="title=Elevate Her Application" data-tf-transitive-search-params data-tf-medium="snippet" style="width:100%;height:600px;"></div>
+                <script src="//embed.typeform.com/next/embed.js"></script>
+            </div>
+        </div>
     </div>
 
     <!-- Intro Section - Light background, full width -->
@@ -528,7 +535,7 @@ margin-bottom: 14px;
                 <li><strong>Community groupchat</strong> access with all the women in the program for additional support, ideas, and accountability</li>
                 <li>Access to our <strong>supplemental library</strong> of video and PDF resources (meal ideas, protein cheat sheets, traveling and staying on track, etc)</li>
                 <li>Access to our <strong>fitness app</strong> to track your progress in and out of the gym & keep all your stats in one easy to use platform</li>
-            </ul>
+</ul>
         </div>
     </section>
 
@@ -537,7 +544,8 @@ margin-bottom: 14px;
         <div class="container">
             <p class="section-label">The Curriculum</p>
             <h2>Inside Look At Our 12 Week Course</h2>
-<p>Education is freedom. Before joining, client's struggle to successfully navigate their fitness journey on their own because they don't know what to do or how to do it for themselves. We put a stop to the cycle by educating our girls on all things what, how, and WHY.</p>
+            
+            <p>Education is freedom. Before joining, client's struggle to successfully navigate their fitness journey on their own because they don't know what to do or how to do it for themselves. We put a stop to the cycle by educating our girls on all things what, how, and WHY.</p>
             
             <div class="module-grid">
                 <div class="module">
@@ -601,9 +609,9 @@ margin-bottom: 14px;
             <div class="coach-card">
                 <h3>Hey guys! My name is Alejandra</h3>
                 <p>I am the head coach and owner behind Elevate Her. My WHY behind this program stems from more than just passion, it comes from lived experience.</p>
+<p>Looking back at where I started, I wasted years of my time, energy, and confidence chasing quick fixes — all for what I thought was the only way to achieve the body of my dreams.</p>
                 
-                <p>Looking back at where I started, I wasted years of my time, energy, and confidence chasing quick fixes — all for what I thought was the only way to achieve the body of my dreams.</p>
-<p>Yet because my methods were never sustainable to begin with, any progress I made as a result was equally as temporary. And although I restricted, sacrificed, and said no more times than I could count for YEARS, I had little to no progress to show for it.</p>
+                <p>Yet because my methods were never sustainable to begin with, any progress I made as a result was equally as temporary. And although I restricted, sacrificed, and said no more times than I could count for YEARS, I had little to no progress to show for it.</p>
                 
                 <p>What I've come to realize now is that I wasn't lacking more discipline or willpower... I was simply following strategies designed for short term results, not long term success.</p>
                 
@@ -646,11 +654,11 @@ margin-bottom: 14px;
             
             <ul class="mission-list">
                 <li>Understand the <em>why</em> behind the actions they're taking</li>
-                <li>Learn <em>how</em> to adjust their protocols based on their goals</li>
+<li>Learn <em>how</em> to adjust their protocols based on their goals</li>
                 <li>Feel confident that <em>what</em> they're doing will finally yield results</li>
             </ul>
         </div>
-</section>
+    </section>
 
     <!-- Testimonials -->
     <section class="section" id="testimonials">
@@ -690,8 +698,8 @@ margin-bottom: 14px;
             
             <div class="testimonial">
                 <h3>Taylor B.</h3>
-                <p>"I loved how my coach was always so caring and positive even when I had some setbacks. Really helped me keep a positive outlook on things and motivated me to be better. She explained every change you made and always provided helpful suggestions when needed."</p>
-<p>"I'm much more mindful of what I'm putting in my body and lifting became therapy for me. The course provided was also very helpful and easy to understand. Nothing but positive changes from working with this program."</p>
+<p>"I loved how my coach was always so caring and positive even when I had some setbacks. Really helped me keep a positive outlook on things and motivated me to be better. She explained every change you made and always provided helpful suggestions when needed."</p>
+                <p>"I'm much more mindful of what I'm putting in my body and lifting became therapy for me. The course provided was also very helpful and easy to understand. Nothing but positive changes from working with this program."</p>
             </div>
             
             <div class="testimonial">
@@ -741,12 +749,12 @@ margin-bottom: 14px;
                         <span class="faq-icon">+</span>
                     </div>
                     <div class="faq-answer">
-                        <p>Rather than completely changing up the way our clients eat, we work with them hands-on to make sure we're providing effective and sustainable nutrition recommendations that cater to their personal preferences.</p>
+<p>Rather than completely changing up the way our clients eat, we work with them hands-on to make sure we're providing effective and sustainable nutrition recommendations that cater to their personal preferences.</p>
                     </div>
                 </div>
                 
                 <div class="faq-item">
-<div class="faq-question" onclick="toggleFaq(this)">
+                    <div class="faq-question" onclick="toggleFaq(this)">
                         <h3>Do I need access to a gym?</h3>
                         <span class="faq-icon">+</span>
                     </div>
@@ -765,8 +773,7 @@ margin-bottom: 14px;
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
     <!-- Final CTA -->
     <section class="cta-section">
@@ -806,4 +813,5 @@ margin-bottom: 14px;
 
 </body>
 </html>
+
 
