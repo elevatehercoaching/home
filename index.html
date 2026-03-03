@@ -63,7 +63,7 @@
             font-weight: 500;
         }
         
-        /* Hero Section - Tighter spacing */
+        /* Hero Section */
         .hero {
             text-align: center;
             padding: 10px 0 30px;
@@ -79,7 +79,7 @@
             letter-spacing: -0.3px;
         }
         
-        /* Typeform - Centered and taller */
+        /* Typeform - Original size */
         .typeform-container {
             margin: 0 auto 50px;
             background: white;
@@ -87,18 +87,13 @@
             overflow: hidden;
             box-shadow: 0 4px 24px rgba(0,0,0,0.06);
             max-width: 700px;
-            display: flex;
-            justify-content: center;
         }
         
-        /* Intro Section - White box */
-        .intro-box {
-            background: white;
-            padding: 40px 48px;
-            border-radius: 16px;
-            margin: 0 auto 60px;
-            box-shadow: 0 2px 16px rgba(0,0,0,0.04);
-            max-width: 720px;
+        /* Intro Section - Light background, full width */
+        .intro-section {
+            background: #F5F0EB;
+            margin: 0 -24px;
+            padding: 60px 24px;
             text-align: center;
         }
         
@@ -110,14 +105,17 @@
             line-height: 1.5;
         }
         
-        .intro-box p {
+        .intro-section p {
             font-size: 16px;
             color: #6B6B6B;
             margin-bottom: 16px;
+            max-width: 640px;
+            margin-left: auto;
+            margin-right: auto;
             line-height: 1.7;
         }
         
-        .intro-box strong {
+        .intro-section strong {
             color: #2D2D2D;
             font-weight: 600;
         }
@@ -127,14 +125,7 @@
             color: #2D2D2D;
             margin-top: 30px;
             font-weight: 500;
-        }
-        
-        /* Divider line */
-        .divider {
-            width: 60%;
-            height: 1px;
-            background: #E8D4C4;
-            margin: 60px auto;
+            margin-bottom: 0;
         }
         
         /* Content Sections */
@@ -146,7 +137,7 @@
             background: white;
             margin: 0 -24px;
             padding: 80px 24px;
-}
+        }
         
         .section h2 {
             font-family: 'Playfair Display', serif;
@@ -158,7 +149,7 @@
         }
         
         .section h3 {
-            font-family: 'Playfair Display', serif;
+font-family: 'Playfair Display', serif;
             font-size: 26px;
             font-weight: 500;
             color: #2D2D2D;
@@ -279,7 +270,7 @@
             margin-bottom: 0;
         }
         
-        /* Coach Cards - Smaller text */
+        /* Coach Cards */
         .coach-card {
             background: white;
             padding: 48px;
@@ -304,7 +295,7 @@
         
         .coach-card p {
             font-size: 15px;
-margin-bottom: 14px;
+            margin-bottom: 14px;
             line-height: 1.7;
             color: #6B6B6B;
         }
@@ -318,7 +309,7 @@ margin-bottom: 14px;
         .mission-list li {
             font-size: 16px;
             color: #2D2D2D;
-            margin-bottom: 14px;
+margin-bottom: 14px;
             padding-left: 28px;
             position: relative;
         }
@@ -449,10 +440,6 @@ margin-bottom: 14px;
                 font-size: 26px;
             }
             
-            .intro-box {
-                padding: 32px 24px;
-            }
-            
             .section h2 {
                 font-size: 28px;
             }
@@ -467,7 +454,7 @@ margin-bottom: 14px;
             
             nav a {
                 margin: 0 12px;
-font-size: 12px;
+                font-size: 12px;
             }
             
             .faq-question {
@@ -487,43 +474,42 @@ font-size: 12px;
         <div class="container">
             <a href="#about">About</a>
             <a href="#coaching">Coaching</a>
-            <a href="#testimonials">Results</a>
+<a href="#testimonials">Results</a>
             <a href="#faq">FAQ</a>
         </div>
     </nav>
 
-    <!-- Hero Section - Headline Only -->
+    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <h1>Finally overcome your fitness plateau & learn exactly how to look and feel your best — restriction free</h1>
         </div>
     </section>
 
-    <!-- Typeform Embed - Centered and Full Height -->
+    <!-- Typeform Embed - Original size -->
     <div class="typeform-container">
-        <div data-tf-widget="BniUdWel" data-tf-opacity="100" data-tf-iframe-props="title=Elevate Her Application" data-tf-transitive-search-params data-tf-medium="snippet" style="width:100%;height:750px;"></div>
+        <div data-tf-widget="BniUdWel" data-tf-opacity="100" data-tf-iframe-props="title=Elevate Her Application" data-tf-transitive-search-params data-tf-medium="snippet" style="width:100%;height:600px;"></div>
         <script src="//embed.typeform.com/next/embed.js"></script>
     </div>
 
-    <!-- Intro Section - White Box -->
-    <div class="intro-box">
-        <p class="intro-lead">If you're looking to make one <strong>LAST</strong> investment in your health and hire the last coach you'll ever need, then look no further!</p>
-        
-        <p>We provide individualized coaching backed by science and rooted in sustainability. It's time to ditch the restrictive diets once and for all, so you can stop dieting and start living.</p>
-        
-        <p>If you find yourself constantly overanalyzing what to eat or what exercises to do...</p>
-        
-        <p>If you're always doubting whether your efforts will pay off or whether you're just wasting your time yet again...</p>
-        
-        <p>You don't need to keep spinning your wheels on your own.</p>
-        
-        <p><strong>Every woman deserves the newfound confidence, self-love, and joy that can be gained from finally looking like they workout.</strong></p>
-        
-        <p class="intro-cta">Click the link below to hop on a FREE consult call with us and find out if we are the best fit for you!</p>
-    </div>
-
-    <!-- Divider Line -->
-    <div class="divider"></div>
+    <!-- Intro Section - Light background, full width -->
+    <section class="intro-section">
+        <div class="container">
+            <p class="intro-lead">If you're looking to make one <strong>LAST</strong> investment in your health and hire the last coach you'll ever need, then look no further!</p>
+            
+            <p>We provide individualized coaching backed by science and rooted in sustainability. It's time to ditch the restrictive diets once and for all, so you can stop dieting and start living.</p>
+            
+            <p>If you find yourself constantly overanalyzing what to eat or what exercises to do...</p>
+            
+            <p>If you're always doubting whether your efforts will pay off or whether you're just wasting your time yet again...</p>
+            
+            <p>You don't need to keep spinning your wheels on your own.</p>
+            
+            <p><strong>Every woman deserves the newfound confidence, self-love, and joy that can be gained from finally looking like they workout.</strong></p>
+            
+            <p class="intro-cta">Click the link below to hop on a FREE consult call with us and find out if we are the best fit for you!</p>
+        </div>
+    </section>
 
     <!-- What's Included -->
     <section class="section" id="coaching">
@@ -541,7 +527,7 @@ font-size: 12px;
                 <li>Bi-weekly <strong>educational zoom calls</strong> with open Q&A sessions at the end</li>
                 <li><strong>Community groupchat</strong> access with all the women in the program for additional support, ideas, and accountability</li>
                 <li>Access to our <strong>supplemental library</strong> of video and PDF resources (meal ideas, protein cheat sheets, traveling and staying on track, etc)</li>
-<li>Access to our <strong>fitness app</strong> to track your progress in and out of the gym & keep all your stats in one easy to use platform</li>
+                <li>Access to our <strong>fitness app</strong> to track your progress in and out of the gym & keep all your stats in one easy to use platform</li>
             </ul>
         </div>
     </section>
@@ -551,8 +537,7 @@ font-size: 12px;
         <div class="container">
             <p class="section-label">The Curriculum</p>
             <h2>Inside Look At Our 12 Week Course</h2>
-            
-            <p>Education is freedom. Before joining, client's struggle to successfully navigate their fitness journey on their own because they don't know what to do or how to do it for themselves. We put a stop to the cycle by educating our girls on all things what, how, and WHY.</p>
+<p>Education is freedom. Before joining, client's struggle to successfully navigate their fitness journey on their own because they don't know what to do or how to do it for themselves. We put a stop to the cycle by educating our girls on all things what, how, and WHY.</p>
             
             <div class="module-grid">
                 <div class="module">
@@ -615,17 +600,18 @@ font-size: 12px;
             
             <div class="coach-card">
                 <h3>Hey guys! My name is Alejandra</h3>
-<p>I am the head coach and owner behind Elevate Her. My WHY behind this program stems from more than just passion, it comes from lived experience.</p>
+                <p>I am the head coach and owner behind Elevate Her. My WHY behind this program stems from more than just passion, it comes from lived experience.</p>
                 
                 <p>Looking back at where I started, I wasted years of my time, energy, and confidence chasing quick fixes — all for what I thought was the only way to achieve the body of my dreams.</p>
+<p>Yet because my methods were never sustainable to begin with, any progress I made as a result was equally as temporary. And although I restricted, sacrificed, and said no more times than I could count for YEARS, I had little to no progress to show for it.</p>
                 
-                <p>Yet because my methods were never sustainable to begin with, any progress I made as a result was equally as temporary. And although I restricted, sacrificed, and said no more times than I could count for YEARS, I had little to no progress to show for it.</p>
-                                
+                <p>What I've come to realize now is that I wasn't lacking more discipline or willpower... I was simply following strategies designed for short term results, not long term success.</p>
+                
                 <p>In 2021 I finally made a decision to put an end to that cycle. To stop chasing "skinny at all costs" and instead build a body and lifestyle I could maintain with freedom and confidence.</p>
                 
                 <p>Fast forward to 2025, I'm beyond grateful to have not only transformed my own approach but to now hold the skillset, experience, and knowledge to help other women avoid making the same mistakes I did.</p>
                 
-                <p>Real life and real results CAN coexist peacefully without compromise, and that's what we're here to show you!.</p>
+                <p>Because Elevate Her isn't about throwing another diet your way. It's about proving that you don't have to cut out the foods you love, spend endless hours in the gym, or sacrifice your sanity just to see results. What you actually need is structure, education, and accountability that teaches you how real life and real results can coexist without compromise.</p>
             </div>
             
             <h2 style="margin-top: 60px;">Meet Our Assistant Coach</h2>
@@ -655,7 +641,8 @@ font-size: 12px;
             <p>Our mission behind <strong>Elevate Her</strong> is to challenge the status quo. Instead of enrolling women with a goal of keeping them under our wing for life, we enable them to finally take control and remain confident in the decisions they'll make when it comes to their own health and fitness journey.</p>
             
             <p>Simply put, we teach you how to fish instead of just giving you the fish.</p>
-<p>We do this by empowering women of all backgrounds to...</p>
+            
+            <p>We do this by empowering women of all backgrounds to...</p>
             
             <ul class="mission-list">
                 <li>Understand the <em>why</em> behind the actions they're taking</li>
@@ -663,7 +650,7 @@ font-size: 12px;
                 <li>Feel confident that <em>what</em> they're doing will finally yield results</li>
             </ul>
         </div>
-    </section>
+</section>
 
     <!-- Testimonials -->
     <section class="section" id="testimonials">
@@ -700,10 +687,11 @@ font-size: 12px;
                 <p>Mikaela came to us looking to educate herself on how to improve her eating habits and overall health for the better. After significant amounts of restriction and trial and error, she knew her current protocols prior to coaching would not be sustainable in the long run.</p>
                 <p>1-on-1 coaching for Mikaela simplified her life and allowed her to find what works for her. It enabled her to take the guesswork out of what she needs to do in and out of the gym so that she could in turn prioritize her studies, establish a good work/life balance, mitigate feelings of gym intimidation, and truly trust that her efforts were moving the needle forward.</p>
             </div>
-<div class="testimonial">
+            
+            <div class="testimonial">
                 <h3>Taylor B.</h3>
                 <p>"I loved how my coach was always so caring and positive even when I had some setbacks. Really helped me keep a positive outlook on things and motivated me to be better. She explained every change you made and always provided helpful suggestions when needed."</p>
-                <p>"I'm much more mindful of what I'm putting in my body and lifting became therapy for me. The course provided was also very helpful and easy to understand. Nothing but positive changes from working with this program."</p>
+<p>"I'm much more mindful of what I'm putting in my body and lifting became therapy for me. The course provided was also very helpful and easy to understand. Nothing but positive changes from working with this program."</p>
             </div>
             
             <div class="testimonial">
@@ -753,12 +741,12 @@ font-size: 12px;
                         <span class="faq-icon">+</span>
                     </div>
                     <div class="faq-answer">
-<p>Rather than completely changing up the way our clients eat, we work with them hands-on to make sure we're providing effective and sustainable nutrition recommendations that cater to their personal preferences.</p>
+                        <p>Rather than completely changing up the way our clients eat, we work with them hands-on to make sure we're providing effective and sustainable nutrition recommendations that cater to their personal preferences.</p>
                     </div>
                 </div>
                 
                 <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
+<div class="faq-question" onclick="toggleFaq(this)">
                         <h3>Do I need access to a gym?</h3>
                         <span class="faq-icon">+</span>
                     </div>
