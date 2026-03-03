@@ -66,28 +66,44 @@
         /* Hero Section */
         .hero {
             text-align: center;
-            padding: 60px 0 50px;
+            padding: 60px 0 30px;
         }
         
         .hero h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 44px;
+            font-size: 36px;
             font-weight: 500;
             color: #2D2D2D;
             margin-bottom: 40px;
-            line-height: 1.25;
-            letter-spacing: -0.5px;
+            line-height: 1.3;
+            letter-spacing: -0.3px;
         }
         
-        .hero-intro {
+        /* Typeform - Right after headline */
+        .typeform-container {
+            margin: 0 auto 60px;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+            max-width: 680px;
+        }
+        
+        /* Intro Section */
+        .intro-section {
+            padding: 0 0 60px;
+            text-align: center;
+        }
+        
+        .intro-lead {
             font-size: 20px;
             color: #2D2D2D;
             margin-bottom: 24px;
-            font-weight: 400;
-            line-height: 1.6;
+            font-weight: 600;
+            line-height: 1.5;
         }
         
-        .hero p {
+        .intro-section p {
             font-size: 17px;
             color: #6B6B6B;
             margin-bottom: 18px;
@@ -96,26 +112,16 @@
             margin-right: auto;
         }
         
-        .hero strong {
+        .intro-section strong {
             color: #2D2D2D;
             font-weight: 600;
         }
         
-        .hero-cta {
+        .intro-cta {
             font-size: 18px;
             color: #2D2D2D;
             margin-top: 40px;
             font-weight: 500;
-        }
-        
-        /* Typeform Container */
-        .typeform-container {
-            margin: 40px auto 60px;
-            background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
-            max-width: 680px;
         }
         
         /* Content Sections */
@@ -141,10 +147,10 @@
         .section h3 {
             font-family: 'Playfair Display', serif;
             font-size: 26px;
-            font-weight: 500;
+font-weight: 500;
             color: #2D2D2D;
             margin: 48px 0 20px;
-}
+        }
         
         .section h4 {
             font-family: 'Playfair Display', serif;
@@ -184,6 +190,11 @@
             font-size: 20px;
         }
         
+        .features-list li strong {
+            color: #2D2D2D;
+            font-weight: 600;
+        }
+        
         /* Course Modules */
         .module-grid {
             display: grid;
@@ -196,6 +207,12 @@
             padding: 28px;
             border-radius: 12px;
             border: 1px solid #F0E6DC;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .module:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
         
         .module h4 {
@@ -221,6 +238,11 @@
             border-radius: 16px;
             margin: 32px 0;
             border: 1px solid #F0E6DC;
+            transition: transform 0.2s ease;
+        }
+        
+        .testimonial:hover {
+            transform: translateY(-2px);
         }
         
         .testimonial h3 {
@@ -244,7 +266,7 @@
             margin-bottom: 0;
         }
         
-        /* Coach Cards */
+        /* Coach Cards - Smaller text */
         .coach-card {
             background: white;
             padding: 48px;
@@ -268,9 +290,10 @@
         }
         
         .coach-card p {
-            font-size: 16px;
-            margin-bottom: 16px;
-            line-height: 1.8;
+            font-size: 15px;
+            margin-bottom: 14px;
+            line-height: 1.7;
+            color: #6B6B6B;
         }
         
         /* Mission List */
@@ -284,7 +307,7 @@
             color: #2D2D2D;
             margin-bottom: 14px;
             padding-left: 28px;
-            position: relative;
+position: relative;
         }
         
         .mission-list li:before {
@@ -295,33 +318,68 @@
             font-weight: 600;
         }
         
-        /* FAQ */
+        /* FAQ Accordion */
+        .faq-container {
+            margin-top: 40px;
+        }
+        
         .faq-item {
-            margin-bottom: 40px;
-            padding-bottom: 40px;
-            border-bottom: 1px solid #E8D4C4;
+            background: white;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
         
-        .faq-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
+        .faq-question {
+            padding: 24px 28px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.2s ease;
         }
         
-        .faq-item h3 {
-font-family: 'Inter', sans-serif;
-            font-size: 17px;
+        .faq-question:hover {
+            background: #FDFBFA;
+        }
+        
+        .faq-question h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
             font-weight: 600;
             color: #2D2D2D;
-            margin-bottom: 14px;
-            margin-top: 0;
+            margin: 0;
+            flex: 1;
         }
         
-        .faq-item p {
-            font-size: 16px;
+        .faq-icon {
+            font-size: 20px;
+            color: #C9B99A;
+            margin-left: 16px;
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-answer p {
+            padding: 0 28px 24px;
+            font-size: 15px;
             color: #6B6B6B;
             margin: 0;
             line-height: 1.7;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 300px;
         }
         
         /* CTA Section */
@@ -390,7 +448,7 @@ font-family: 'Inter', sans-serif;
         /* Responsive */
         @media (max-width: 640px) {
             .hero h1 {
-                font-size: 32px;
+                font-size: 28px;
             }
             
             .section h2 {
@@ -409,6 +467,13 @@ font-family: 'Inter', sans-serif;
                 margin: 0 12px;
                 font-size: 12px;
             }
+.faq-question {
+                padding: 20px 24px;
+            }
+            
+            .faq-question h3 {
+                font-size: 15px;
+            }
         }
     </style>
 </head>
@@ -424,12 +489,23 @@ font-family: 'Inter', sans-serif;
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - Headline Only -->
     <section class="hero">
         <div class="container">
             <h1>Finally overcome your fitness plateau & learn exactly how to look and feel your best — restriction free</h1>
-            
-            <p class="hero-intro">If you're looking to make one <strong>LAST</strong> investment in your health and hire the last coach you'll ever need, then look no further!</p>
+        </div>
+    </section>
+
+    <!-- Typeform Embed - Right After Headline -->
+    <div class="typeform-container">
+        <div data-tf-widget="BniUdWel" data-tf-opacity="100" data-tf-iframe-props="title=Elevate Her Application" data-tf-transitive-search-params data-tf-medium="snippet" style="width:100%;height:600px;"></div>
+        <script src="//embed.typeform.com/next/embed.js"></script>
+    </div>
+
+    <!-- Intro Section - After Typeform -->
+    <section class="intro-section">
+        <div class="container">
+            <p class="intro-lead">If you're looking to make one <strong>LAST</strong> investment in your health and hire the last coach you'll ever need, then look no further!</p>
             
             <p>We provide individualized coaching backed by science and rooted in sustainability. It's time to ditch the restrictive diets once and for all, so you can stop dieting and start living.</p>
             
@@ -440,15 +516,10 @@ font-family: 'Inter', sans-serif;
             <p>You don't need to keep spinning your wheels on your own.</p>
             
             <p><strong>Every woman deserves the newfound confidence, self-love, and joy that can be gained from finally looking like they workout.</strong></p>
-<p class="hero-cta">Click the link below to hop on a FREE consult call with us and find out if we are the best fit for you!</p>
+            
+            <p class="intro-cta">Click the link below to hop on a FREE consult call with us and find out if we are the best fit for you!</p>
         </div>
     </section>
-
-    <!-- Typeform Embed -->
-    <div class="typeform-container">
-        <div data-tf-widget="BniUdWel" data-tf-opacity="100" data-tf-iframe-props="title=Elevate Her Application" data-tf-transitive-search-params data-tf-medium="snippet" style="width:100%;height:600px;"></div>
-        <script src="//embed.typeform.com/next/embed.js"></script>
-    </div>
 
     <!-- What's Included -->
     <section class="section" id="coaching">
@@ -457,16 +528,16 @@ font-family: 'Inter', sans-serif;
             <h2>What's Included In 1:1 Coaching?</h2>
             
             <ul class="features-list">
-                <li>12 week course lifetime access to help you learn what to do, how to do it, and the why behind what we do</li>
-                <li>Tailored nutritional guidance with delicious, yet realistic meal ideas for busy women that don't want to spend hours in the kitchen</li>
-                <li>Weekly check ins with detailed feedback, evaluations, and adjustments</li>
-                <li>Structured training program tailored to your schedule as well as what areas you're specifically looking to improve — gym or at home programs available</li>
-                <li>24/7 coach messaging availability to ask questions, send form review videos, and get the hands-on support you need WHEN you need it</li>
-                <li>Extensive exercise library with video demonstrations and form cues</li>
-                <li>Bi-weekly educational zoom calls with open Q&A sessions at the end</li>
-                <li>Community groupchat access with all the women in the program for additional support, ideas, and accountability</li>
-                <li>Access to our supplemental library of video and PDF resources (meal ideas, protein cheat sheets, traveling and staying on track, etc)</li>
-                <li>Access to our fitness app to track your progress in and out of the gym & keep all your stats in one easy to use platform</li>
+                <li><strong>12 week course</strong> lifetime access to help you learn what to do, how to do it, and the why behind what we do</li>
+                <li>Tailored <strong>nutritional guidance</strong> with delicious, yet realistic meal ideas for busy women that don't want to spend hours in the kitchen</li>
+                <li><strong>Weekly check ins</strong> with detailed feedback, evaluations, and adjustments</li>
+                <li>Structured <strong>training program</strong> tailored to your schedule as well as what areas you're specifically looking to improve — gym or at home programs available</li>
+                <li><strong>24/7 coach messaging availability</strong> to ask questions, send form review videos, and get the hands-on support you need WHEN you need it</li>
+                <li>Extensive <strong>exercise library</strong> with video demonstrations and form cues</li>
+                <li>Bi-weekly <strong>educational zoom calls</strong> with open Q&A sessions at the end</li>
+                <li><strong>Community groupchat</strong> access with all the women in the program for additional support, ideas, and accountability</li>
+                <li>Access to our <strong>supplemental library</strong> of video and PDF resources (meal ideas, protein cheat sheets, traveling and staying on track, etc)</li>
+<li>Access to our <strong>fitness app</strong> to track your progress in and out of the gym & keep all your stats in one easy to use platform</li>
             </ul>
         </div>
     </section>
@@ -501,7 +572,7 @@ font-family: 'Inter', sans-serif;
                     <p>Meal timing, pre/post workout nutrition, and how to navigate social situations while staying on track.</p>
                 </div>
                 <div class="module">
-<h4>Week 6: Training Optimization</h4>
+                    <h4>Week 6: Training Optimization</h4>
                     <p>Periodization, deload weeks, and how to adjust your training based on your body's feedback.</p>
                 </div>
                 <div class="module">
@@ -540,7 +611,7 @@ font-family: 'Inter', sans-serif;
             
             <div class="coach-card">
                 <h3>Hey guys! My name is Alejandra</h3>
-                <p>I am the head coach and owner behind Elevate Her. My WHY behind this program stems from more than just passion, it comes from lived experience.</p>
+<p>I am the head coach and owner behind Elevate Her. My WHY behind this program stems from more than just passion, it comes from lived experience.</p>
                 
                 <p>Looking back at where I started, I wasted years of my time, energy, and confidence chasing quick fixes — all for what I thought was the only way to achieve the body of my dreams.</p>
                 
@@ -559,7 +630,8 @@ font-family: 'Inter', sans-serif;
             
             <div class="coach-card">
                 <h4>Hey there, I'm Jacquelyn, Coach Jacq. for short!</h4>
-<p>I began my career as a professional chef and through it all began to realize how deeply I could use food to make an impact on others, all while building a body my younger self would be proud of.</p>
+                
+                <p>I began my career as a professional chef and through it all began to realize how deeply I could use food to make an impact on others, all while building a body my younger self would be proud of.</p>
                 
                 <p>I may have started as a chef, but my first love was bodybuilding. I've competed in dozens of bodybuilding competitions, completely shifting the way I view my relationship with food, my body, and more importantly myself.</p>
                 
@@ -581,8 +653,7 @@ font-family: 'Inter', sans-serif;
             <p>Our mission behind <strong>Elevate Her</strong> is to challenge the status quo. Instead of enrolling women with a goal of keeping them under our wing for life, we enable them to finally take control and remain confident in the decisions they'll make when it comes to their own health and fitness journey.</p>
             
             <p>Simply put, we teach you how to fish instead of just giving you the fish.</p>
-            
-            <p>We do this by empowering women of all backgrounds to...</p>
+<p>We do this by empowering women of all backgrounds to...</p>
             
             <ul class="mission-list">
                 <li>Understand the <em>why</em> behind the actions they're taking</li>
@@ -612,7 +683,7 @@ font-family: 'Inter', sans-serif;
             
             <div class="testimonial">
                 <h3>Shivani T.</h3>
-<p>"I now have a very healthy relationship with the process of 'cutting' or being in a calorie deficit as well as tracking macros. All of which I avoided due to fear of lack of knowledge, confidence, uncertainty and stress until I began this program."</p>
+                <p>"I now have a very healthy relationship with the process of 'cutting' or being in a calorie deficit as well as tracking macros. All of which I avoided due to fear of lack of knowledge, confidence, uncertainty and stress until I began this program."</p>
                 <p>"I definitely gained so many valuable skills and mindset shifts throughout this whole process that have not only educated me on becoming more in tune with my body but also shown me how to navigate staying on track during both high and low periods of life."</p>
             </div>
             
@@ -627,8 +698,7 @@ font-family: 'Inter', sans-serif;
                 <p>Mikaela came to us looking to educate herself on how to improve her eating habits and overall health for the better. After significant amounts of restriction and trial and error, she knew her current protocols prior to coaching would not be sustainable in the long run.</p>
                 <p>1-on-1 coaching for Mikaela simplified her life and allowed her to find what works for her. It enabled her to take the guesswork out of what she needs to do in and out of the gym so that she could in turn prioritize her studies, establish a good work/life balance, mitigate feelings of gym intimidation, and truly trust that her efforts were moving the needle forward.</p>
             </div>
-            
-            <div class="testimonial">
+<div class="testimonial">
                 <h3>Taylor B.</h3>
                 <p>"I loved how my coach was always so caring and positive even when I had some setbacks. Really helped me keep a positive outlook on things and motivated me to be better. She explained every change you made and always provided helpful suggestions when needed."</p>
                 <p>"I'm much more mindful of what I'm putting in my body and lifting became therapy for me. The course provided was also very helpful and easy to understand. Nothing but positive changes from working with this program."</p>
@@ -648,35 +718,62 @@ font-family: 'Inter', sans-serif;
         </div>
     </section>
 
-    <!-- FAQ -->
-<section class="section-alt" id="faq">
+    <!-- FAQ - Accordion Style -->
+    <section class="section-alt" id="faq">
         <div class="container">
             <p class="section-label">Questions</p>
             <h2>Frequently Asked Questions</h2>
             
-            <div class="faq-item">
-                <h3>Can I do a one month trial?</h3>
-                <p>While we've tried trials in the past, we found 1 month commitments just don't work. One month commitments promote the quick fix mentality we're trying to get away from. We want to give you the resources you need to make lasting changes, build the body of your dreams, and 30 days just isn't enough time.</p>
-            </div>
-            
-            <div class="faq-item">
-                <h3>How much does it cost?</h3>
-                <p>Our prices are directly correlated to what type of plan, how long and what type of support you'll need to accomplish your goals. We’ve worked with women at every financial starting point, including women who were reliant on unemployment and/or food stamps. So if finances are the main concern we can almost always come up with something that aligns with your goals AND your budget.</p>
-            </div>
-            
-            <div class="faq-item">
-                <h3>Will I be forced to follow a strict diet or nutritional protocols?</h3>
-                <p>Rather than completely changing up the way our clients eat, we work with them hands-on to make sure we're providing effective and sustainable nutrition recommendations that cater to their personal preferences.</p>
-            </div>
-            
-            <div class="faq-item">
-                <h3>Do I need access to a gym?</h3>
-                <p>Gym access is encouraged, however we cater to any equipment you have available including commercial gym access, apartment gym access, home gyms / equipment, etc.</p>
-            </div>
-            
-            <div class="faq-item">
-                <h3>I'm busy, how long will my workouts be?</h3>
-                <p>The answer depends on several lifestyle factors and how much time you can realistically dedicate to the gym. Number of sessions can range from 3-5 times per week for a duration of about 45 to 75 minutes per session.</p>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Can I do a one month trial?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>While we've tried trials in the past, we found 1 month commitments just don't work. One month commitments promote the quick fix mentality we're trying to get away from. We want to give you the resources you need to make lasting changes, build the body of your dreams, and 30 days just isn't enough time.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>How much does it cost?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our prices are directly correlated to what type of plan, how long and what type of support you'll need to accomplish your goals. The investment can range anywhere from $7 per day to a little over a thousand dollars total. Regardless if finances is the main concern we'll focus on bringing something that's going to be best for your budget and goals.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Will I be forced to follow a strict diet or nutritional protocols?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+<p>Rather than completely changing up the way our clients eat, we work with them hands-on to make sure we're providing effective and sustainable nutrition recommendations that cater to their personal preferences.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Do I need access to a gym?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Gym access is encouraged, however we cater to any equipment you have available including commercial gym access, apartment gym access, home gyms / equipment, etc.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>I'm busy, how long will my workouts be?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The answer depends on several lifestyle factors and how much time you can realistically dedicate to the gym. Number of sessions can range from 3-5 times per week for a duration of about 45 to 75 minutes per session.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -698,6 +795,24 @@ font-family: 'Inter', sans-serif;
             <p>© 2026 Elevate HER. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- FAQ Accordion JavaScript -->
+    <script>
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            
+            // Close all FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Open clicked item if it wasn't already active
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
+    </script>
 
 </body>
 </html>
