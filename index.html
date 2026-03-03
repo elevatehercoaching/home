@@ -6,78 +6,429 @@
     <title>Elevate HER - 12 Week Course</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background-color: #FAF8F5; color: #2D2D2D; line-height: 1.7; }
-        .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         
-        /* Hero */
-        .hero { text-align: center; padding: 60px 0 40px; }
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: 40px; font-weight: 500; color: #2D2D2D; margin-bottom: 30px; line-height: 1.2; }
-        .hero-intro { font-size: 19px; color: #2D2D2D; margin-bottom: 20px; font-weight: 500; }
-        .hero p { font-size: 17px; color: #6B6B6B; margin-bottom: 15px; }
+        html {
+            scroll-behavior: smooth;
+        }
         
-        /* Typeform */
-        .typeform-container { background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); margin: 30px auto; max-width: 700px; overflow: hidden; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FAF8F5;
+            color: #2D2D2D;
+            line-height: 1.8;
+            font-weight: 400;
+        }
         
-        /* Sections */
-        .section { padding: 60px 0; }
-        .section h2 { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 500; color: #2D2D2D; margin-bottom: 25px; }
-        .section h3 { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 500; color: #2D2D2D; margin: 40px 0 15px; }
-        .section p { font-size: 17px; color: #6B6B6B; margin-bottom: 20px; }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
         
-        /* Features */
-        .features-list { margin: 30px 0; }
-        .features-list li { font-size: 16px; color: #2D2D2D; margin-bottom: 15px; list-style: none; padding-left: 30px; position: relative; line-height: 1.6; }
-        .features-list li:before { content: "✓"; position: absolute; left: 0; color: #C9B99A; font-weight: bold; font-size: 20px; }
+        /* Navigation */
+        nav {
+            padding: 40px 0;
+            text-align: center;
+            background: #FAF8F5;
+        }
+        
+        nav a {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            color: #6B6B6B;
+            text-decoration: none;
+            margin: 0 24px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: #2D2D2D;
+        }
+        
+        /* Section Labels */
+        .section-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #C9B99A;
+            margin-bottom: 24px;
+            font-weight: 500;
+        }
+        
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 60px 0 50px;
+        }
+        
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 44px;
+            font-weight: 500;
+            color: #2D2D2D;
+            margin-bottom: 40px;
+            line-height: 1.25;
+            letter-spacing: -0.5px;
+        }
+        
+        .hero-intro {
+            font-size: 20px;
+            color: #2D2D2D;
+            margin-bottom: 24px;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+        
+        .hero p {
+            font-size: 17px;
+            color: #6B6B6B;
+            margin-bottom: 18px;
+            max-width: 640px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero strong {
+            color: #2D2D2D;
+            font-weight: 600;
+        }
+        
+        .hero-cta {
+            font-size: 18px;
+            color: #2D2D2D;
+            margin-top: 40px;
+            font-weight: 500;
+        }
+        
+        /* Typeform Container */
+        .typeform-container {
+            margin: 40px auto 60px;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+            max-width: 680px;
+        }
+        
+        /* Content Sections */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-alt {
+            background: white;
+            margin: 0 -24px;
+            padding: 80px 24px;
+        }
+        
+        .section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-weight: 500;
+            color: #2D2D2D;
+            margin-bottom: 32px;
+            line-height: 1.3;
+        }
+        
+        .section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            font-weight: 500;
+            color: #2D2D2D;
+            margin: 48px 0 20px;
+}
+        
+        .section h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            font-weight: 500;
+            color: #2D2D2D;
+            margin-bottom: 16px;
+        }
+        
+        .section p {
+            font-size: 17px;
+            color: #6B6B6B;
+            margin-bottom: 20px;
+        }
+        
+        /* Features List */
+        .features-list {
+            margin: 40px 0;
+            list-style: none;
+        }
+        
+        .features-list li {
+            font-size: 16px;
+            color: #2D2D2D;
+            margin-bottom: 18px;
+            padding-left: 36px;
+            position: relative;
+            line-height: 1.6;
+        }
+        
+        .features-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #C9B99A;
+            font-weight: bold;
+            font-size: 20px;
+        }
         
         /* Course Modules */
-        .module-grid { display: grid; gap: 20px; margin-top: 30px; }
-        .module { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.03); }
-        .module h4 { font-size: 16px; font-weight: 600; color: #2D2D2D; margin-bottom: 8px; }
-        .module p { font-size: 14px; color: #6B6B6B; margin: 0; }
+        .module-grid {
+            display: grid;
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .module {
+            background: #FAF8F5;
+            padding: 28px;
+            border-radius: 12px;
+            border: 1px solid #F0E6DC;
+        }
+        
+        .module h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            color: #2D2D2D;
+            margin-bottom: 10px;
+            letter-spacing: 0.3px;
+        }
+        
+        .module p {
+            font-size: 14px;
+            color: #6B6B6B;
+            margin: 0;
+            line-height: 1.6;
+        }
         
         /* Testimonials */
-        .testimonial { background: white; padding: 35px; border-radius: 12px; margin: 25px 0; box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
-        .testimonial h3 { font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 600; color: #2D2D2D; margin-bottom: 15px; }
-        .testimonial p { font-size: 15px; color: #6B6B6B; margin-bottom: 15px; font-style: italic; }
-        .testimonial cite { font-size: 14px; color: #6B6B6B; font-weight: 600; font-style: normal; }
+        .testimonial {
+            background: #FAF8F5;
+            padding: 40px;
+            border-radius: 16px;
+            margin: 32px 0;
+            border: 1px solid #F0E6DC;
+        }
         
-        /* Coach Section */
-        .coach-section { background: white; padding: 50px 35px; border-radius: 12px; margin: 30px 0; }
-        .coach-section h3 { font-family: 'Playfair Display', serif; font-size: 26px; margin-bottom: 20px; margin-top: 0; }
-        .coach-section h4 { font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 15px; color: #2D2D2D; }
-        .coach-section p { font-size: 16px; margin-bottom: 15px; }
+        .testimonial h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: #2D2D2D;
+            margin-bottom: 16px;
+            margin-top: 0;
+        }
         
-        /* Mission Section */
-        .mission-list { margin: 30px 0; }
-        .mission-list li { font-size: 16px; color: #2D2D2D; margin-bottom: 12px; list-style: none; padding-left: 25px; position: relative; }
-        .mission-list li:before { content: "-"; position: absolute; left: 0; color: #C9B99A; font-weight: bold; }
+        .testimonial p {
+            font-size: 16px;
+            color: #6B6B6B;
+            margin-bottom: 16px;
+            font-style: italic;
+            line-height: 1.7;
+        }
         
-        /* CTA */
-        .cta-section { text-align: center; padding: 70px 20px; background: white; }
-.cta-button { display: inline-block; background-color: #E8D4C4; color: #2D2D2D; padding: 18px 40px; font-size: 16px; font-weight: 500; text-decoration: none; border-radius: 50px; margin-top: 20px; }
+        .testimonial p:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* Coach Cards */
+        .coach-card {
+            background: white;
+            padding: 48px;
+            border-radius: 16px;
+            margin: 32px 0;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+        }
+        
+        .coach-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            margin-bottom: 24px;
+            margin-top: 0;
+        }
+        
+        .coach-card h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #2D2D2D;
+        }
+        
+        .coach-card p {
+            font-size: 16px;
+            margin-bottom: 16px;
+            line-height: 1.8;
+        }
+        
+        /* Mission List */
+        .mission-list {
+            margin: 28px 0;
+            list-style: none;
+        }
+        
+        .mission-list li {
+            font-size: 16px;
+            color: #2D2D2D;
+            margin-bottom: 14px;
+            padding-left: 28px;
+            position: relative;
+        }
+        
+        .mission-list li:before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #C9B99A;
+            font-weight: 600;
+        }
+        
+        /* FAQ */
+        .faq-item {
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #E8D4C4;
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .faq-item h3 {
+font-family: 'Inter', sans-serif;
+            font-size: 17px;
+            font-weight: 600;
+            color: #2D2D2D;
+            margin-bottom: 14px;
+            margin-top: 0;
+        }
+        
+        .faq-item p {
+            font-size: 16px;
+            color: #6B6B6B;
+            margin: 0;
+            line-height: 1.7;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            padding: 100px 24px;
+            background: white;
+            margin: 0 -24px;
+        }
+        
+        .cta-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 38px;
+            margin-bottom: 24px;
+            color: #2D2D2D;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #E8D4C4;
+            color: #2D2D2D;
+            padding: 20px 48px;
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: none;
+            border-radius: 50px;
+            margin-top: 32px;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+        }
+        
+        .cta-button:hover {
+            background-color: #D4C4B4;
+            transform: translateY(-2px);
+        }
         
         /* Footer */
-        footer { text-align: center; padding: 40px 20px; border-top: 1px solid #E8D4C4; }
-        footer p { font-size: 14px; color: #6B6B6B; margin-bottom: 10px; }
+        footer {
+            text-align: center;
+            padding: 60px 24px;
+            border-top: 1px solid #E8D4C4;
+            margin-top: 0;
+        }
         
-        @media (max-width: 600px) { 
-            .hero h1 { font-size: 28px; } 
-            .section h2 { font-size: 26px; }
-            .coach-section { padding: 30px 20px; }
+        footer p {
+            font-size: 14px;
+            color: #6B6B6B;
+            margin-bottom: 8px;
+        }
+        
+        /* Image Placeholder */
+        .image-placeholder {
+            width: 100%;
+            height: 400px;
+            background: #F5E6D3;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #C9B99A;
+            font-size: 14px;
+            margin: 40px 0;
+            font-style: italic;
+        }
+        
+        /* Responsive */
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .section h2 {
+                font-size: 28px;
+            }
+            
+            .coach-card {
+                padding: 32px 24px;
+            }
+            
+            .testimonial {
+                padding: 28px 24px;
+            }
+            
+            nav a {
+                margin: 0 12px;
+                font-size: 12px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        
-        <!-- HEADLINE -->
-        <section class="hero">
-            <h1>Finally overcome your fitness plateau & learn exactly how to look and feel your best - restriction free</h1>
-        </section>
 
-        <!-- INTRO TEXT -->
-        <section class="section" style="padding-top: 0;">
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="#about">About</a>
+            <a href="#coaching">Coaching</a>
+            <a href="#testimonials">Results</a>
+            <a href="#faq">FAQ</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Finally overcome your fitness plateau & learn exactly how to look and feel your best — restriction free</h1>
+            
             <p class="hero-intro">If you're looking to make one <strong>LAST</strong> investment in your health and hire the last coach you'll ever need, then look no further!</p>
             
             <p>We provide individualized coaching backed by science and rooted in sustainability. It's time to ditch the restrictive diets once and for all, so you can stop dieting and start living.</p>
@@ -89,102 +440,109 @@
             <p>You don't need to keep spinning your wheels on your own.</p>
             
             <p><strong>Every woman deserves the newfound confidence, self-love, and joy that can be gained from finally looking like they workout.</strong></p>
-            
-            <p style="margin-top: 30px; font-size: 18px; color: #2D2D2D;"><strong>Click the link below to hop on a FREE consult call with us and find out if we are the best fit for you!</strong></p>
-        </section>
-
-        <!-- TYPEFORM EMBED -->
-        <div class="typeform-container">
-            <div data-tf-widget="BniUdWel" data-tf-opacity="100" data-tf-iframe-props="title=Elevate Her Application" data-tf-transitive-search-params data-tf-medium="snippet" style="width:100%;height:600px;"></div>
-            <script src="//embed.typeform.com/next/embed.js"></script>
+<p class="hero-cta">Click the link below to hop on a FREE consult call with us and find out if we are the best fit for you!</p>
         </div>
+    </section>
 
-        <!-- WHAT'S INCLUDED -->
-        <section class="section">
+    <!-- Typeform Embed -->
+    <div class="typeform-container">
+        <div data-tf-widget="BniUdWel" data-tf-opacity="100" data-tf-iframe-props="title=Elevate Her Application" data-tf-transitive-search-params data-tf-medium="snippet" style="width:100%;height:600px;"></div>
+        <script src="//embed.typeform.com/next/embed.js"></script>
+    </div>
+
+    <!-- What's Included -->
+    <section class="section" id="coaching">
+        <div class="container">
+            <p class="section-label">The Program</p>
             <h2>What's Included In 1:1 Coaching?</h2>
             
             <ul class="features-list">
                 <li>12 week course lifetime access to help you learn what to do, how to do it, and the why behind what we do</li>
                 <li>Tailored nutritional guidance with delicious, yet realistic meal ideas for busy women that don't want to spend hours in the kitchen</li>
                 <li>Weekly check ins with detailed feedback, evaluations, and adjustments</li>
-                <li>Structured training program tailored to your schedule as well as what areas you're specifically looking to improve - gym or at home programs available</li>
+                <li>Structured training program tailored to your schedule as well as what areas you're specifically looking to improve — gym or at home programs available</li>
                 <li>24/7 coach messaging availability to ask questions, send form review videos, and get the hands-on support you need WHEN you need it</li>
                 <li>Extensive exercise library with video demonstrations and form cues</li>
                 <li>Bi-weekly educational zoom calls with open Q&A sessions at the end</li>
                 <li>Community groupchat access with all the women in the program for additional support, ideas, and accountability</li>
                 <li>Access to our supplemental library of video and PDF resources (meal ideas, protein cheat sheets, traveling and staying on track, etc)</li>
                 <li>Access to our fitness app to track your progress in and out of the gym & keep all your stats in one easy to use platform</li>
-</ul>
-        </section>
+            </ul>
+        </div>
+    </section>
 
-        <!-- INSIDE LOOK - 12 WEEK COURSE -->
-        <section class="section" style="background: white; margin: 0 -20px; padding: 60px 20px;">
-            <div class="container">
-                <h2>Inside Look At Our 12 Week Course</h2>
-                <p>Education is freedom. Before joining, client's struggle to successfully navigate their fitness journey on their own because they don't know what to do or how to do it for themselves. We put a stop to the cycle by educating our girls on all things what, how, and WHY.</p>
-                
-                <div class="module-grid">
-                    <div class="module">
-                        <h4>Week 1: Foundation & Goal Setting</h4>
-                        <p>Establish your baseline, set realistic goals, and learn the fundamentals of sustainable fitness.</p>
-                    </div>
-                    <div class="module">
-                        <h4>Week 2: Nutrition Basics</h4>
-                        <p>Understanding macros, micronutrients, and how to build balanced meals without restriction.</p>
-                    </div>
-                    <div class="module">
-                        <h4>Week 3: Training Principles</h4>
-                        <p>Learn proper form, progressive overload, and how to structure your workouts for maximum results.</p>
-                    </div>
-                    <div class="module">
-                        <h4>Week 4: Mindset & Habits</h4>
-                        <p>Breaking old patterns, building consistency, and developing a healthy relationship with food and fitness.</p>
-                    </div>
-                    <div class="module">
-                        <h4>Week 5: Advanced Nutrition</h4>
-                        <p>Meal timing, pre/post workout nutrition, and how to navigate social situations while staying on track.</p>
-                    </div>
-                    <div class="module">
-                        <h4>Week 6: Training Optimization</h4>
-                        <p>Periodization, deload weeks, and how to adjust your training based on your body's feedback.</p>
-                    </div>
-                    <div class="module">
-                        <h4>Week 7: Recovery & Sleep</h4>
-                        <p>The importance of rest, stress management, and how sleep impacts your progress.</p>
-                    </div>
-                    <div class="module">
-                        <h4>Week 8: Troubleshooting Plateaus</h4>
-                        <p>What to do when progress stalls, how to make adjustments, and staying motivated long-term.</p>
-                    </div>
-                    <div class="module">
-                        <h4>Week 9: Lifestyle Integration</h4>
-                        <p>Traveling, dining out, holidays, and maintaining your results in real-life situations.</p>
-                    </div>
-                    <div class="module">
-                        <h4>Week 10: Metabolic Health</h4>
-                        <p>Understanding your metabolism, reverse dieting, and sustainable maintenance strategies.</p>
-                    </div>
-                    <div class="module">
-                        <h4>Week 11: Long-Term Planning</h4>
-                        <p>Creating your own protocols, independent decision making, and setting future goals.</p>
-                    </div>
-                    <div class="module">
-                        <h4>Week 12: Graduation & Beyond</h4>
-                        <p>Celebrating your progress, maintenance strategies, and continuing your journey with confidence.</p>
-                    </div>
+    <!-- 12 Week Course Preview -->
+    <section class="section-alt">
+        <div class="container">
+            <p class="section-label">The Curriculum</p>
+            <h2>Inside Look At Our 12 Week Course</h2>
+            
+            <p>Education is freedom. Before joining, client's struggle to successfully navigate their fitness journey on their own because they don't know what to do or how to do it for themselves. We put a stop to the cycle by educating our girls on all things what, how, and WHY.</p>
+            
+            <div class="module-grid">
+                <div class="module">
+                    <h4>Week 1: Foundation & Goal Setting</h4>
+                    <p>Establish your baseline, set realistic goals, and learn the fundamentals of sustainable fitness.</p>
+                </div>
+                <div class="module">
+                    <h4>Week 2: Nutrition Basics</h4>
+                    <p>Understanding macros, micronutrients, and how to build balanced meals without restriction.</p>
+                </div>
+                <div class="module">
+                    <h4>Week 3: Training Principles</h4>
+                    <p>Learn proper form, progressive overload, and how to structure your workouts for maximum results.</p>
+                </div>
+                <div class="module">
+                    <h4>Week 4: Mindset & Habits</h4>
+                    <p>Breaking old patterns, building consistency, and developing a healthy relationship with food and fitness.</p>
+                </div>
+                <div class="module">
+                    <h4>Week 5: Advanced Nutrition</h4>
+                    <p>Meal timing, pre/post workout nutrition, and how to navigate social situations while staying on track.</p>
+                </div>
+                <div class="module">
+<h4>Week 6: Training Optimization</h4>
+                    <p>Periodization, deload weeks, and how to adjust your training based on your body's feedback.</p>
+                </div>
+                <div class="module">
+                    <h4>Week 7: Recovery & Sleep</h4>
+                    <p>The importance of rest, stress management, and how sleep impacts your progress.</p>
+                </div>
+                <div class="module">
+                    <h4>Week 8: Troubleshooting Plateaus</h4>
+                    <p>What to do when progress stalls, how to make adjustments, and staying motivated long-term.</p>
+                </div>
+                <div class="module">
+                    <h4>Week 9: Lifestyle Integration</h4>
+                    <p>Traveling, dining out, holidays, and maintaining your results in real-life situations.</p>
+                </div>
+                <div class="module">
+                    <h4>Week 10: Metabolic Health</h4>
+                    <p>Understanding your metabolism, reverse dieting, and sustainable maintenance strategies.</p>
+                </div>
+                <div class="module">
+                    <h4>Week 11: Long-Term Planning</h4>
+                    <p>Creating your own protocols, independent decision making, and setting future goals.</p>
+                </div>
+                <div class="module">
+                    <h4>Week 12: Graduation & Beyond</h4>
+                    <p>Celebrating your progress, maintenance strategies, and continuing your journey with confidence.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- MEET OUR HEAD COACH -->
-        <section class="section">
+    <!-- Meet the Coaches -->
+    <section class="section" id="about">
+        <div class="container">
+            <p class="section-label">The Team</p>
             <h2>Meet Our Head Coach</h2>
             
-            <div class="coach-section">
+            <div class="coach-card">
                 <h3>Hey guys! My name is Alejandra</h3>
-<p>I am the head coach and owner behind Elevate Her. My WHY behind this program stems from more than just passion, it comes from lived experience.</p>
+                <p>I am the head coach and owner behind Elevate Her. My WHY behind this program stems from more than just passion, it comes from lived experience.</p>
                 
-                <p>Looking back at where I started, I wasted years of my time, energy, and confidence chasing quick fixes - all for what I thought was the only way to achieve the body of my dreams.</p>
+                <p>Looking back at where I started, I wasted years of my time, energy, and confidence chasing quick fixes — all for what I thought was the only way to achieve the body of my dreams.</p>
                 
                 <p>Yet because my methods were never sustainable to begin with, any progress I made as a result was equally as temporary. And although I restricted, sacrificed, and said no more times than I could count for YEARS, I had little to no progress to show for it.</p>
                 
@@ -196,93 +554,151 @@
                 
                 <p>Because Elevate Her isn't about throwing another diet your way. It's about proving that you don't have to cut out the foods you love, spend endless hours in the gym, or sacrifice your sanity just to see results. What you actually need is structure, education, and accountability that teaches you how real life and real results can coexist without compromise.</p>
             </div>
-        </section>
-
-        <!-- MEET OUR ASSISTANT COACH -->
-        <section class="section" style="background: white; margin: 0 -20px; padding: 60px 20px;">
-            <div class="container">
-                <h2>Meet Our Assistant Coach</h2>
+            
+            <h2 style="margin-top: 60px;">Meet Our Assistant Coach</h2>
+            
+            <div class="coach-card">
+                <h4>Hey there, I'm Jacquelyn, Coach Jacq. for short!</h4>
+<p>I began my career as a professional chef and through it all began to realize how deeply I could use food to make an impact on others, all while building a body my younger self would be proud of.</p>
                 
-                <div class="coach-section">
-                    <h4>Hey there, I'm Jacquelyn, Coach Jacq. for short!</h4>
-                    
-                    <p>I began my career as a professional chef and through it all began to realize how deeply I could use food to make an impact on others, all while building a body my younger self would be proud of.</p>
-                    
-                    <p>I may have started as a chef, but my first love was bodybuilding. I've competed in dozens of bodybuilding competitions, completely shifting the way I view my relationship with food, my body, and more importantly myself.</p>
-                    
-                    <p>Later in life, I expanded my love for food into a career that allows me to pay it forward through my acquisition of a Master's in Clinical Nutrition, and certificates in epigenetics and nutrigenomics, Personal Training, and Precision Nutrition Lvl. 1.</p>
-                    
-                    <p>I truly believe we have an opportunity to better ourselves with the decisions we make daily. Decisions that can lead you to feel worthy in your clothes or feel confident enough to apply for a promotion you may not have otherwise gone for.</p>
-                    
-                    <p>This is the type of impact I'm looking to help women make. Lasting changes that lead to a better physique, a better relationship with themselves, and positive shift in their lives as a whole.</p>
-                </div>
+                <p>I may have started as a chef, but my first love was bodybuilding. I've competed in dozens of bodybuilding competitions, completely shifting the way I view my relationship with food, my body, and more importantly myself.</p>
+                
+                <p>Later in life, I expanded my love for food into a career that allows me to pay it forward through my acquisition of a Master's in Clinical Nutrition, and certificates in epigenetics and nutrigenomics, Personal Training, and Precision Nutrition Lvl. 1.</p>
+                
+                <p>I truly believe we have an opportunity to better ourselves with the decisions we make daily. Decisions that can lead you to feel worthy in your clothes or feel confident enough to apply for a promotion you may not have otherwise gone for.</p>
+                
+                <p>This is the type of impact I'm looking to help women make. Lasting changes that lead to a better physique, a better relationship with themselves, and positive shift in their lives as a whole.</p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- OUR MISSION -->
-        <section class="section">
+    <!-- Our Mission -->
+    <section class="section-alt">
+        <div class="container">
+            <p class="section-label">Our Why</p>
             <h2>Our Mission</h2>
             
-            <div class="coach-section">
-<p>Our mission behind <strong>Elevate Her</strong> is to challenge the status quo. Instead of enrolling women with a goal of keeping them under our wing for life, we enable them to finally take control and remain confident in the decisions they'll make when it comes to their own health and fitness journey.</p>
-                
-                <p>Simply put, we teach you how to fish instead of just giving you the fish.</p>
-                
-                <p>We do this by empowering women of all backgrounds to...</p>
-                
-                <ul class="mission-list">
-                    <li>Understand the why behind the actions they're taking</li>
-                    <li>Learn how to adjust their protocols based on their goals</li>
-                    <li>Feel confident that what they're doing will finally yield results</li>
-                </ul>
+            <p>Our mission behind <strong>Elevate Her</strong> is to challenge the status quo. Instead of enrolling women with a goal of keeping them under our wing for life, we enable them to finally take control and remain confident in the decisions they'll make when it comes to their own health and fitness journey.</p>
+            
+            <p>Simply put, we teach you how to fish instead of just giving you the fish.</p>
+            
+            <p>We do this by empowering women of all backgrounds to...</p>
+            
+            <ul class="mission-list">
+                <li>Understand the <em>why</em> behind the actions they're taking</li>
+                <li>Learn <em>how</em> to adjust their protocols based on their goals</li>
+                <li>Feel confident that <em>what</em> they're doing will finally yield results</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" id="testimonials">
+        <div class="container">
+            <p class="section-label">Client Wins</p>
+            <h2>Real Women. Real Results.</h2>
+            
+            <div class="testimonial">
+                <h3>Vanessa Partida</h3>
+                <p>Vanessa has been an amazing client of ours since 2022! She successfully lost a total of 13 pounds leading up to her wedding day and has been able to keep the weight off since.</p>
+                <p>She's also been able to effectively improve her body composition by gaining muscle AND losing fat, without ever needing to deprive herself of her favorite foods or resorting to extreme calorie restrictions.</p>
             </div>
-        </section>
-
-        <!-- TESTIMONIALS -->
-        <section class="section" style="background: white; margin: 0 -20px; padding: 60px 20px;">
-            <div class="container">
-                <h2>Client Success Stories</h2>
-                
-                <div class="testimonial">
-                    <h3>Vanessa Partida</h3>
-                    <p>Vanessa has been an amazing client of ours since 2022! She successfully lost a total of 13 pounds leading up to her wedding day and has been able to keep the weight off since.</p>
-                    <p>She's also been able to effectively improve her body composition by gaining muscle AND losing fat, without ever needing to deprive herself of her favorite foods or resorting to extreme calorie restrictions.</p>
-                </div>
-
-                <div class="testimonial">
-                    <h3>Gabriela A.</h3>
-                    <p>"Not only did this program give me the facts and tools I need to move forward with my own specific fitness & health goals, but my coach was also extremely patient with me throughout the process. I love how they broke up the education so that it wasn't overwhelming. My coach's kind words were so helpful during harder weeks and everything was tailored to me."</p>
-                    <p>"Thank you for not only helping me with my initial goal of looking good in Hawaii, but also helping me reach my long term goal of feeling better about myself."</p>
-                </div>
-
-                <div class="testimonial">
-                    <h3>Shivani T.</h3>
-                    <p>"I now have a very healthy relationship with the process of 'cutting' or being in a calorie deficit as well as tracking macros. All of which I avoided due to fear of lack of knowledge, confidence, uncertainty and stress until I began this program."</p>
-                    <p>"I definitely gained so many valuable skills and mindset shifts throughout this whole process that have not only educated me on becoming more in tune with my body but also shown me how to navigate staying on track during both high and low periods of life."</p>
-                </div>
-
-                <div class="testimonial">
-                    <h3>Shelby E.</h3>
-                    <p>"I very much enjoyed watching myself improve in the workouts and even more so in my progress pictures. I felt even more motivated when I began to see results because it reassured me for one that the process is working and two that I'm finally achieving my goals."</p>
-                    <p>"I've learned what I need to know in order to continue to maintain or even improve on the results I saw in the program (25 lbs down and counting) and I'm excited to see where the rest of my journey may take me. Thank you guys!"</p>
-                </div>
+            
+            <div class="testimonial">
+                <h3>Gabriela A.</h3>
+                <p>"Not only did this program give me the facts and tools I need to move forward with my own specific fitness & health goals, but my coach was also extremely patient with me throughout the process. I love how they broke up the education so that it wasn't overwhelming. My coach's kind words were so helpful during harder weeks and everything was tailored to me."</p>
+                <p>"Thank you for not only helping me with my initial goal of looking good in Hawaii, but also helping me reach my long term goal of feeling better about myself."</p>
             </div>
-        </section>
+            
+            <div class="testimonial">
+                <h3>Shivani T.</h3>
+<p>"I now have a very healthy relationship with the process of 'cutting' or being in a calorie deficit as well as tracking macros. All of which I avoided due to fear of lack of knowledge, confidence, uncertainty and stress until I began this program."</p>
+                <p>"I definitely gained so many valuable skills and mindset shifts throughout this whole process that have not only educated me on becoming more in tune with my body but also shown me how to navigate staying on track during both high and low periods of life."</p>
+            </div>
+            
+            <div class="testimonial">
+                <h3>Shelby E.</h3>
+                <p>"I very much enjoyed watching myself improve in the workouts and even more so in my progress pictures. I felt even more motivated when I began to see results because it reassured me for one that the process is working and two that I'm finally achieving my goals."</p>
+                <p>"I've learned what I need to know in order to continue to maintain or even improve on the results I saw in the program (25 lbs down and counting) and I'm excited to see where the rest of my journey may take me. Thank you guys!"</p>
+            </div>
+            
+            <div class="testimonial">
+                <h3>Mikaela Libunao</h3>
+                <p>Mikaela came to us looking to educate herself on how to improve her eating habits and overall health for the better. After significant amounts of restriction and trial and error, she knew her current protocols prior to coaching would not be sustainable in the long run.</p>
+                <p>1-on-1 coaching for Mikaela simplified her life and allowed her to find what works for her. It enabled her to take the guesswork out of what she needs to do in and out of the gym so that she could in turn prioritize her studies, establish a good work/life balance, mitigate feelings of gym intimidation, and truly trust that her efforts were moving the needle forward.</p>
+            </div>
+            
+            <div class="testimonial">
+                <h3>Taylor B.</h3>
+                <p>"I loved how my coach was always so caring and positive even when I had some setbacks. Really helped me keep a positive outlook on things and motivated me to be better. She explained every change you made and always provided helpful suggestions when needed."</p>
+                <p>"I'm much more mindful of what I'm putting in my body and lifting became therapy for me. The course provided was also very helpful and easy to understand. Nothing but positive changes from working with this program."</p>
+            </div>
+            
+            <div class="testimonial">
+                <h3>Olivia L.</h3>
+                <p>"13 pounds down so far! I really enjoyed how easy it was to open up to and reach my coach. She always answered in less than a few minutes and always provided me with extra useful information."</p>
+                <p>"She always helped me see the positives in my mistakes and provided me with constructive feedback. I'm drinking more water than I was before and going to the gym no longer feels like a chore. I also no longer overeat. Instead I know when I'm satisfied and learned to eat my favorite foods in moderation."</p>
+            </div>
+            
+            <div class="testimonial">
+                <h3>Mikaela L.</h3>
+                <p>"Apart from the education I got with each of my check ins and questions answered, having the modules to rely on helped me learn how to properly set up my workouts, set my macros/calories, how to eat intuitively, and more."</p>
+                <p>"I used to have an all or nothing mindset with everything related to fitness and placed unrealistic expectations on myself. I tried so many things on my own and nothing was working. So I decided to take a leap of faith by joining and it's been one of the best decisions I've ever made."</p>
+            </div>
+        </div>
+    </section>
 
-        <!-- FINAL CTA -->
-        <section class="cta-section">
-            <h2 style="font-family: 'Playfair Display', serif; font-size: 36px; margin-bottom: 20px;">Ready to Transform Your Life?</h2>
-<p style="font-size: 17px; color: #6B6B6B; max-width: 500px; margin: 0 auto 30px;">Apply now to secure your spot in the Elevate HER program.</p>
+    <!-- FAQ -->
+<section class="section-alt" id="faq">
+        <div class="container">
+            <p class="section-label">Questions</p>
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <h3>Can I do a one month trial?</h3>
+                <p>While we've tried trials in the past, we found 1 month commitments just don't work. One month commitments promote the quick fix mentality we're trying to get away from. We want to give you the resources you need to make lasting changes, build the body of your dreams, and 30 days just isn't enough time.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>How much does it cost?</h3>
+                <p>Our prices are directly correlated to what type of plan, how long and what type of support you'll need to accomplish your goals. The investment can range anywhere from $7 per day to a little over a thousand dollars total. Regardless if finances is the main concern we'll focus on bringing something that's going to be best for your budget and goals.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Will I be forced to follow a strict diet or nutritional protocols?</h3>
+                <p>Rather than completely changing up the way our clients eat, we work with them hands-on to make sure we're providing effective and sustainable nutrition recommendations that cater to their personal preferences.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Do I need access to a gym?</h3>
+                <p>Gym access is encouraged, however we cater to any equipment you have available including commercial gym access, apartment gym access, home gyms / equipment, etc.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>I'm busy, how long will my workouts be?</h3>
+                <p>The answer depends on several lifestyle factors and how much time you can realistically dedicate to the gym. Number of sessions can range from 3-5 times per week for a duration of about 45 to 75 minutes per session.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Transform Your Life?</h2>
+            <p>Apply now to secure your spot in the Elevate HER program.</p>
             <a href="https://workoutsbyavb.typeform.com/to/BniUdWel" class="cta-button" target="_blank">Apply for 1:1 Coaching</a>
-            <p style="font-size: 14px; color: #6B6B6B; margin-top: 30px;">Questions? Email workoutsbyavb@gmail.com</p>
-        </section>
+            <p style="font-size: 15px; color: #6B6B6B; margin-top: 32px;">Questions? Email workoutsbyavb@gmail.com — I read every message.</p>
+        </div>
+    </section>
 
-        <!-- FOOTER -->
-        <footer>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
             <p><strong>Elevate HER</strong></p>
             <p>© 2026 Elevate HER. All rights reserved.</p>
-        </footer>
+        </div>
+    </footer>
 
-    </div>
 </body>
 </html>
+
